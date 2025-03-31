@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonogram Zajęć</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: lightgray;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let today = new Date().getDay();
+            if (today > 0 && today < 6) {
+                document.querySelectorAll("th")[today].classList.add("highlight");
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Harmonogram Zajęć</h1>
+    <table>
+        <tr>
+            <th>Godzina</th>
+            <th>Poniedziałek</th>
+            <th>Wtorek</th>
+            <th>Środa</th>
+            <th>Czwartek</th>
+            <th>Piątek</th>
+        </tr>
+        <tr>
+            <td>8:00 - 9:30</td>
+            <td>Matematyka</td>
+            <td>Historia</td>
+            <td>Fizyka</td>
+            <td>Angielski</td>
+            <td>Biologia</td>
+        </tr>
+        <tr>
+            <td>10:00 - 11:30</td>
+            <td>Informatyka</td>
+            <td>Geografia</td>
+            <td>WF</td>
+            <td>Chemia</td>
+
+        </tr>
+        <tr>
+
+            <td>Matematyka</td>
+            <td>Historia</td>
+            <td>Fizyka</td>
+        </tr>
+    </table>
+</body>
+</html>
